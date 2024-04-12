@@ -1,3 +1,27 @@
+/* resset básico */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
- background-color: antiquewhite;
+    background-color: rgb(109, 166, 216);
+    font-family: sans-serif;
+}
+
+.container{
+ background-color: rgb(23, 43, 36);
+ display: flex;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(74, 74, 126);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 32px;
+    border: 1px saddlebrown ;
 }
