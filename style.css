@@ -6,8 +6,19 @@
 }
 
 body {
-    background-color: rgb(109, 166, 216);
-    font-family: sans-serif;
+    background-color: rgb(208, 187, 255);
+    color: rgb(36, 34, 51);
+
+    /*  display: inline-flex; ajusta el ancho al espacio de los contenidos */
+    /*display: flex; Ajusta el ancho al espacio disponible*/
+
+
+    display: flex;
+
+    /* flex-direction: row; Valor por default. direccion main axis -> izq-der */
+    /*  flex-direction: row-reverse; Direccion main axis -> der-izq */
+    /* flex-direction: column; cambia la direccion de arriba hacia abajo */
+   /*  flex-direction: column-reverse; cambia la direccion de abajo hacia arribs  */
 }
 
 .container{
