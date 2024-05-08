@@ -13,14 +13,37 @@ body {
 }
 
 .container {
-    background-color: rgb(23, 43, 36);
+    background-color: rgb(255, 152, 233);
+    width: 350px;
     height: 500px;
+   
 
     /*  display: inline-flex; ajusta el ancho al espacio de los contenidos */
     /*display: flex; Ajusta el ancho al espacio disponible*/
 
 
     display: flex;
+    /*flex-wrap: nowrap; Valor por default, esto hace que los items se ajusten al espacio disponible */
+    flex-wrap: wrap; /* Dara saltos d elinea en los items cuando no quepan en el espacio disponible, si el contenedor no tiene espacio disponible se ajustrá automaticamnete*/
+
+    /*  Aling content-> esta porpiedad trabaj cuando hay multiples lineas */
+
+    align-content: normal; /* valor por default */
+    align-content: flex-start; /* ajusta las lineas al inicio del eje transversal  */
+    align-content: end; /* ajusta las lineas al final del eje transversal*/
+    align-content: center; /* ajusta las lineas al eje transversal  */
+    align-content: space-around; /*  es de arriba a absjo */
+    align-content: space-between; /*  se distribuye entre las lineas */
+    align-content: space-evenly;/* distribuye el espacio proporcionalmente entre las lineas y considra el contenedor */
+    align-content: stretch; /*  va a crear la altura del eje tranversal, tiene prohibido el hight de los items */
+
+        /* ejercicio 8 mayo 2024 */
+
+        
+        align-content:space-between;
+        justify-content: space-between;
+        
+
 
     /* flex-direction: row; Valor por default. direccion main axis -> izq-der */
     /*  flex-direction: row-reverse; Direccion main axis -> der-izq */
@@ -28,32 +51,32 @@ body {
     /*  flex-direction: column-reverse; cambia la direccion de abajo hacia arribs  */
 
     /* justify-content: start; */
-    /*justify-content: add; */
+    /* justify-content: add; */
     /* justify-content: center; */
     /* justify-content: space-around; */
     /* justify-content: space-between; */
-    /*  justify-content: space-evenly; */
+    /* justify-content: space-evenly; */
 
 
 
     /* align-items: flex-start; alinia hacia arriba */
-    /*     align-items: flex-end; alinia hacia abajo*/
+    /* align-items: flex-end; alinia hacia abajo*/
     /* align-items: center; se alinian al centro*/
     /* align-items: stretch; Crece en la altura los elementos en el espacio disponible. Los elementos no deben tener alto definido */
     /* align-items: baseline; alinia los elemntos con funcion a la base de lo que tienen */
 
 
-    /* EJERCCIO*/
+    /* EJERCCIO
 
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
-
+    */
 }
 
 .item {
     width: 100px;
-    height: 100px;
+    height: 100px; 
     background-color: rgb(74, 74, 126);
     text-align: center;
     font-size: 24px;
