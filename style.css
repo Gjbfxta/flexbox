@@ -15,27 +15,47 @@ body {
 .container {
     background-color: rgb(255, 152, 233);
     display: flex;
-    flex-direction: row;
-    flex-direction: column;/*  cambia de direccipn el eje primcipal */
+
 }
 
 /* Propiedades de flexbox para los items
 
-   Flex- basis Tamño del main-sixe del elemnto. Es como width ancho base del elemeto.
+    Flex- grow -> Esta propiedad ajusta el factor del cresimiento de los lementos en funcion del espacio disponible. El valor por default es 'auto'.
 
-    cuado flex diection tiene un valor row| row-reverse -> flex bassis= ancho
-    cuado flex diection tiene un valor column| column-reverse -> flex bassis= alta
-    Flex-basis es rrelativa al espaccio disponible de contenedor .sino hay espacio sufiente los eleemntos no creceran mas alla.
-    si tengo flex basis declarado el width no funciona.
+    Esta porpiedad recibe valores numerico: 1,2,3...
+    El numero que coloquemos es el valor que crecerá
+
 
 */
 .item {
-    flex-basis: 400px;
-    height: 500px;
-    width: 200px;
+
+    flex-grow: auto;
+    /* valor por default */
+    flex-grow: 1;
+    /*  Va hacer que todos los items crescan con el mimo factor */
     background-color: rgb(74, 74, 126);
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    border: 1px solid rgb(209, 180, 160);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.tuna {
+    flex-grow: 1;
+    background-color: rgb(255, 188, 214);
+}
+
+.change {
+    flex-grow: 2; /* el item con etsa clse, crececon un factor de 2 */
+    background-color: rgb(157, 255, 162);
+}
+
+.toby {
+    flex-grow: 3;
+    background-color: rgb(255, 213, 122);
+}
+
+.max {
+    flex-grow: 4;
+    background-color: aquamarine;
 }
