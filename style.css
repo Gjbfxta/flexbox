@@ -12,30 +12,52 @@ body {
 
 }
 
+
+
 .container {
     background-color: rgb(255, 152, 233);
     display: flex;
 
 }
 
-/* Propiedades de flexbox para los items
+/* flex-Shrink
 
-    Flex- grow -> Esta propiedad ajusta el factor del cresimiento de los lementos en funcion del espacio disponible. El valor por default es 'auto'.
+   Es una propiedad que ajusta el factor de estrechamiento "aplastar" de los elemtentos. 
 
-    Esta porpiedad recibe valores numerico: 1,2,3...
-    El numero que coloquemos es el valor que crecerá
-
+   flex-shrink: 1 -> Este es valor por default. Recibe valores numericos: 1.2.3.4...Enttre más grande sea el numero mayor sera su factor de decrecimiento.
+   
 
 */
-.item {
 
-    flex-grow: auto;
-    /* valor por default */
-    flex-grow: 1;
-    /*  Va hacer que todos los items crescan con el mimo factor */
+.item {
+    flex-basis: 300px; /* Ancho. el valor por flex-direction:coluim */
+    flex-shrink: 1; /*  Este es el valor por default */
     background-color: rgb(74, 74, 126);
     text-align: center;
     font-size: 24px;
+    font-weight: bold;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+
+/*  calses para los items */
+.apachurro1{
+flex-grow: 1;
+flex-shrink: 1;
+}
+
+.apachurro2{
+flex-grow: 2;
+flex-shrink: 2;
+}
+.apachurro3 {
+flex-grow: 3;
+flex-shrink: 3;
+}
+.apachurro4 {
+flex-grow: 4;
+flex-shrink: 4;
+}
     font-weight: bold;
     border: 1px solid rgb(0, 0, 0);
 }
