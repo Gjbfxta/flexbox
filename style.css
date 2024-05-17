@@ -12,30 +12,23 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
-
 /* 
 
-Gap -> espacio entre los elementos.
+Aling-self -> se pasa a un elemtoe ne particular 
+Va a alilinuar en el eje transcverssal a ese elemetos unicamente.Y sobre escribirse la propiedadde aling-items y su valor si se ha declarado en el contenedor 
 
-Recibe valores numericos con uniddes relativas o absolutas
+alaing self recibe los mismo valores qu aling-items:  Flex-start, flex-end, center, strech, baseline.
 
-Esta propiedad se pasa al contenedor.
-
+se recomienda usar cundo los items se comportan de manera dfiferente
 */
-
 .container {
-    width: 500px;
+    width: auto;
+    height: 500PX;
     background-color: rgb(255, 152, 233);
     display: flex;
     flex-wrap: wrap;
-    /* gap: 24px; /* espacio entre elementos */
-    /* gap: 4rem; /* unidades apsolutas como */
-    column-gap: 24px;
-    /*  deja espacio entre los elementos vertical */
-    row-gap: 32px;
-    /* espacio entre los elemtos en horizonrtal */
-    gap: 10px 32px; /* El primero es en espacio horizontal y el segundo en espacio vertical */
-
+    align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -43,9 +36,15 @@ Esta propiedad se pasa al contenedor.
     width: 100px;
     height: 100px;
 
+    /* align-self: flex-start; */ 
+
     background-color: rgb(74, 74, 126);
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     border: 1px solid rgb(0, 0, 0);
+}
+
+.solo{
+    align-self: flex-start;
 }
