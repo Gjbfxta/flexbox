@@ -1,4 +1,5 @@
 /* resset básico */
+
 * {
     padding: 0;
     margin: 0;
@@ -12,72 +13,39 @@ body {
 
 }
 
+/* 
 
+Gap -> espacio entre los elementos.
 
-.container {
-    background-color: rgb(255, 152, 233);
-    display: flex;
+Recibe valores numericos con uniddes relativas o absolutas
 
-}
-
-/* flex-Shrink
-
-   Es una propiedad que ajusta el factor de estrechamiento "aplastar" de los elemtentos. 
-
-   flex-shrink: 1 -> Este es valor por default. Recibe valores numericos: 1.2.3.4...Enttre más grande sea el numero mayor sera su factor de decrecimiento.
-   
+Esta propiedad se pasa al contenedor.
 
 */
 
+.container {
+    width: 500px;
+    background-color: rgb(255, 152, 233);
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 24px; /* espacio entre elementos */
+    /* gap: 4rem; /* unidades apsolutas como */
+    column-gap: 24px;
+    /*  deja espacio entre los elementos vertical */
+    row-gap: 32px;
+    /* espacio entre los elemtos en horizonrtal */
+    gap: 10px 32px; /* El primero es en espacio horizontal y el segundo en espacio vertical */
+
+}
+
+
 .item {
-    flex-basis: 300px; /* Ancho. el valor por flex-direction:coluim */
-    flex-shrink: 1; /*  Este es el valor por default */
+    width: 100px;
+    height: 100px;
+
     background-color: rgb(74, 74, 126);
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     border: 1px solid rgb(0, 0, 0);
-}
-
-
-/*  calses para los items */
-.apachurro1{
-flex-grow: 1;
-flex-shrink: 1;
-}
-
-.apachurro2{
-flex-grow: 2;
-flex-shrink: 2;
-}
-.apachurro3 {
-flex-grow: 3;
-flex-shrink: 3;
-}
-.apachurro4 {
-flex-grow: 4;
-flex-shrink: 4;
-}
-    font-weight: bold;
-    border: 1px solid rgb(0, 0, 0);
-}
-
-.tuna {
-    flex-grow: 1;
-    background-color: rgb(255, 188, 214);
-}
-
-.change {
-    flex-grow: 2; /* el item con etsa clse, crececon un factor de 2 */
-    background-color: rgb(157, 255, 162);
-}
-
-.toby {
-    flex-grow: 3;
-    background-color: rgb(255, 213, 122);
-}
-
-.max {
-    flex-grow: 4;
-    background-color: aquamarine;
 }
